@@ -193,6 +193,7 @@ struct PROJECT : PROJ_AM {
 
     bool suspended_via_gui;
     bool dont_request_more_work; 
+	bool dont_upload_work;
         // Return work, but don't request more
         // Used for a clean exit to a project,
         // or if a user wants to pause doing work for the project
@@ -251,7 +252,7 @@ struct PROJECT : PROJ_AM {
         // the next result to run for this project
     int nuploading_results;
         // number of results in UPLOADING state
-        // Don't start new results if these exceeds 2*ncpus.
+        // Don't start new results if these exceeds 1000*ncpus.
     bool too_many_uploading_results;
 
     // scheduling (work fetch and job scheduling)

@@ -66,7 +66,6 @@
 #include "file_names.h"
 #include "log_flags.h"
 #include "client_msgs.h"
-#include "http_curl.h"
 #include "sandbox.h"
 
 #include "main.h"

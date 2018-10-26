@@ -631,7 +631,7 @@ void WORK_FETCH::setup() {
 
     // don't request work from projects w/ > 1000 runnable jobs
     //
-    int job_limit = 1000;
+    int job_limit = 64000;
     for (unsigned int i=0; i<gstate.projects.size(); i++) {
         PROJECT* p = gstate.projects[i];
         if (p->pwf.n_runnable_jobs > job_limit && !p->pwf.project_reason) {
@@ -1000,7 +1000,7 @@ void CLIENT_STATE::compute_nuploading_results() {
             n = coprocs.coprocs[j].count;
         }
     }
-    n *= 2;
+    n *= 1000;
     for (i=0; i<projects.size(); i++) {
         if (projects[i]->nuploading_results > n) {
             projects[i]->too_many_uploading_results = true;

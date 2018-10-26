@@ -641,7 +641,8 @@ int CLIENT_STATE::init() {
 
     // inform the user if there's a newer version of client
     //
-    newer_version_startup_check();
+
+    // newer_version_startup_check();
 
     // parse account files again,
     // now that we know the host's venue on each project

@@ -130,7 +130,8 @@ int CLIENT_STATE::make_scheduler_request(PROJECT* p) {
         "    <duration_correction_factor>%f</duration_correction_factor>\n"
         "    <allow_multiple_clients>%d</allow_multiple_clients>\n"
         "    <sandbox>%d</sandbox>\n"
-        "    <dont_send_work>%d</dont_send_work>\n",
+        "    <dont_send_work>%d</dont_send_work>\n"
+		"    <dont_upload_work>%d</dont_upload_work>\n",
         p->authenticator,
         p->hostid,
         p->rpc_seqno,
@@ -143,7 +144,8 @@ int CLIENT_STATE::make_scheduler_request(PROJECT* p) {
         p->duration_correction_factor,
         cc_config.allow_multiple_clients?1:0,
         g_use_sandbox?1:0,
-        p->dont_request_more_work?1:0
+		p->dont_request_more_work?1:0,
+		p->dont_upload_work?1:0
     );
     work_fetch.write_request(f, p);
 
@@ -1321,6 +1323,11 @@ PROJECT* CLIENT_STATE::find_project_with_overdue_results(
         if (p->dont_request_more_work) {
             return p;
         }
+		/*
+		if (!p->dont_upload_work) {
+		return p;
+		}
+		*/
 
         if (r->report_immediately) {
             return p;
