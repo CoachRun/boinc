@@ -61,7 +61,7 @@
 /android/BOINC/app/src/main/assets/ca-bundle.crt
 
 ## files created by _autosetup (autoreconf):
-*.in
+#*.in
 *.in~
 aclocal.m4
 autom4te.cache/
@@ -77,8 +77,8 @@ m4/ltoptions.m4
 m4/ltsugar.m4
 m4/ltversion.m4
 m4/lt~obsolete.m4
-missing
-test-driver
+#missing
+#test-driver
 
 ## files created by configure:
 Makefile
