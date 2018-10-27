@@ -364,8 +364,19 @@ int PROJECT::write_state(MIOFILE& out, bool gui_rpc) {
         "<project>\n"
     );
 
-    xml_escape(user_name, un, sizeof(un));
-    xml_escape(team_name, tn, sizeof(tn));
+    // if this project was attached via SU, show the SU user and team names
+    //
+    if (gstate.acct_mgr_info.using_am()
+        && attached_via_acct_mgr
+        && gstate.acct_mgr_info.dynamic
+        && strlen(gstate.acct_mgr_info.user_name)
+    ) {
+        xml_escape(gstate.acct_mgr_info.user_name, un, sizeof(un));
+        xml_escape(gstate.acct_mgr_info.team_name, tn, sizeof(tn));
+    } else {
+        xml_escape(user_name, un, sizeof(un));
+        xml_escape(team_name, tn, sizeof(tn));
+    }
     out.printf(
         "    <master_url>%s</master_url>\n"
         "    <project_name>%s</project_name>\n"
@@ -449,7 +460,7 @@ int PROJECT::write_state(MIOFILE& out, bool gui_rpc) {
         verify_files_on_app_start?"    <verify_files_on_app_start/>\n":"",
         suspended_via_gui?"    <suspended_via_gui/>\n":"",
         dont_request_more_work?"    <dont_request_more_work/>\n":"",
-		dont_upload_work ? "    <dont_upload_work/>\n": "",
+		dont_upload_work ? "    <dont_upload_work/>\n" : "",
         detach_when_done?"    <detach_when_done/>\n":"",
         ended?"    <ended/>\n":"",
         attached_via_acct_mgr?"    <attached_via_acct_mgr/>\n":"",

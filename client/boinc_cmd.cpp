@@ -107,7 +107,7 @@ Commands:\n\
  --task url task_name op            task operation\n\
    op = suspend | resume | abort\n\
 "
-); 
+);
     exit(1);
 }
 
@@ -367,7 +367,7 @@ int main(int argc, char** argv) {
 			retval = rpc.project_op(project, "dont_upload_work");
 		} else if (!strcmp(op, "allow_upload_work")) {
 			retval = rpc.project_op(project, "allow_upload_work");
-        } else if (!strcmp(op, "detach_when_done")) {
+		} else if (!strcmp(op, "detach_when_done")) {
             retval = rpc.project_op(project, "detach_when_done");
         } else if (!strcmp(op, "dont_detach_when_done")) {
             retval = rpc.project_op(project, "dont_detach_when_done");
@@ -500,28 +500,12 @@ int main(int argc, char** argv) {
 	} else if (!strcmp(cmd, "--set_request_wus")) {
 		int num;
 		if (i == argc) {
-			num = 0;
+			num = 1;
 		}
 		else {
 			num = atoi(next_arg(argc, argv, i));
 		}
 		printf("soon, %d", num);
-		/*
-		retval = rpc.set_cpu_count(num);
-		if (!retval) {
-			unsigned int j;
-			for (j = 0; j<messages.messages.size(); j++) {
-				MESSAGE& md = *messages.messages[j];
-				strip_whitespace(md.body);
-				printf("%d: %s (%s) [%s] %s\n",
-					md.seqno,
-					time_to_string(md.timestamp),
-					prio_name(md.priority),
-					md.project.c_str(),
-					md.body.c_str()
-					);
-			}
-			*/
 	} else if (!strcmp(cmd, "--get_notices")) {
         int seqno;
         if (i == argc) {

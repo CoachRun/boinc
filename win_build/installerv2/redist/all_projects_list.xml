@@ -180,14 +180,11 @@
         <description><![CDATA[Universe@Home aims to create the first database of the simulated stellar content of the Universe, from the earliest stars to the most exotic black hole binaries.]]></description>
         <home>University of Warsaw</home>
     <platforms>
-        <name>aarch64-android-linux-gnu</name>
         <name>aarch64-unknown-linux-gnu</name>
         <name>arm-android-linux-gnu[android_arm_pie]</name>
         <name>arm-unknown-linux-gnueabihf</name>
-        <name>armv6l-unknown-linux-gnueabihf</name>
         <name>armv7l-unknown-linux-gnueabihf</name>
         <name>windows_x86_64</name>
-        <name>windows_x86_64[opencl_ati_101]</name>
         <name>x86_64-pc-linux-gnu</name>
     </platforms>
       <image>https://boinc.berkeley.edu/images/universe_at_home.png</image>
@@ -263,7 +260,6 @@
         <name>windows_intelx86[BRP4G-opencl-ati]</name>
         <name>windows_intelx86[FGRPSSE]</name>
         <name>windows_intelx86[opencl-intel_gpu]</name>
-        <name>windows_x86_64</name>
         <name>windows_x86_64[BRP4G-Beta-opencl-ati]</name>
         <name>windows_x86_64[BRP4G-Beta-opencl-intel_gpu]</name>
         <name>windows_x86_64[BRP4G-opencl-ati]</name>
@@ -278,8 +274,6 @@
         <name>x86_64-apple-darwin[FGRPopencl-ati-mav]</name>
         <name>x86_64-apple-darwin[FGRPopencl-nvidia-mav]</name>
         <name>x86_64-apple-darwin[FGRPSSE]</name>
-        <name>x86_64-apple-darwin[Lion]</name>
-        <name>x86_64-pc-linux-gnu</name>
         <name>x86_64-pc-linux-gnu[BRP4G-Beta-cuda32-nv270]</name>
         <name>x86_64-pc-linux-gnu[BRP4G-Beta-cuda55]</name>
         <name>x86_64-pc-linux-gnu[BRP4G-Beta-opencl-ati]</name>
@@ -291,7 +285,6 @@
         <name>x86_64-pc-linux-gnu[FGRPopencl1K-ati]</name>
         <name>x86_64-pc-linux-gnu[FGRPopencl1K-nvidia]</name>
         <name>x86_64-pc-linux-gnu[FGRPSSE]</name>
-        <name>x86_64-pc-linux-gnu[LIBC215]</name>
     </platforms>
       <image>https://boinc.berkeley.edu/images/einstein.jpg</image>
       <summary>Help detect pulsars and gravitational waves</summary>
@@ -322,20 +315,26 @@
         <name>windows_x86_64[avx]</name>
         <name>windows_x86_64[sse2]</name>
         <name>windows_x86_64[vbox64]</name>
+        <name>windows_x86_64[vbox64_mt_mcore]</name>
         <name>windows_x86_64[vbox64_mt_mcore_atlas]</name>
+        <name>windows_x86_64[vbox64_mt_mcore_lhcb]</name>
         <name>x86-android-linux-gnu[sse2]</name>
         <name>x86_64-android-linux-gnu[sse2]</name>
         <name>x86_64-apple-darwin[avx]</name>
         <name>x86_64-apple-darwin[sse2]</name>
         <name>x86_64-apple-darwin[vbox64]</name>
+        <name>x86_64-apple-darwin[vbox64_mt_mcore]</name>
         <name>x86_64-apple-darwin[vbox64_mt_mcore_atlas]</name>
+        <name>x86_64-apple-darwin[vbox64_mt_mcore_lhcb]</name>
         <name>x86_64-pc-freebsd[avx]</name>
         <name>x86_64-pc-freebsd[sse2]</name>
         <name>x86_64-pc-linux-gnu[avx]</name>
         <name>x86_64-pc-linux-gnu[native_mt]</name>
         <name>x86_64-pc-linux-gnu[sse2]</name>
         <name>x86_64-pc-linux-gnu[vbox64]</name>
+        <name>x86_64-pc-linux-gnu[vbox64_mt_mcore]</name>
         <name>x86_64-pc-linux-gnu[vbox64_mt_mcore_atlas]</name>
+        <name>x86_64-pc-linux-gnu[vbox64_mt_mcore_lhcb]</name>
         <name>x86_64-pc-openbsd[sse2]</name>
     </platforms>
       <image>https://boinc.berkeley.edu/images/lhc.jpg</image>
@@ -370,6 +369,7 @@
         <name>arm-android-linux-gnu[armv7-vfpv4-nopie]</name>
         <name>arm-unknown-linux-gnueabihf</name>
         <name>i686-apple-darwin</name>
+        <name>i686-apple-darwin[osx_12]</name>
         <name>i686-pc-linux-gnu</name>
         <name>i686-pc-linux-gnu[sse]</name>
         <name>i686-pc-linux-gnu[sse2]</name>
@@ -411,6 +411,7 @@
         <name>x86_64-apple-darwin[opencl_intel_gpu_mac]</name>
         <name>x86_64-apple-darwin[opencl_intel_gpu_sah]</name>
         <name>x86_64-apple-darwin[opencl_nvidia_mac]</name>
+        <name>x86_64-apple-darwin[osx_12]</name>
         <name>x86_64-apple-darwin[sse3]</name>
         <name>x86_64-pc-linux-gnu</name>
         <name>x86_64-pc-linux-gnu[cuda60]</name>
@@ -619,6 +620,7 @@
         <name>i686-pc-linux-gnu[ati_opencl]</name>
         <name>i686-pc-linux-gnu[intel_opencl]</name>
         <name>i686-pc-linux-gnu[nvidia_opencl]</name>
+        <name>i686-pc-linux-gnu[opencl_ati_gpu]</name>
         <name>windows_intelx86</name>
         <name>windows_intelx86[opencl_ati_gpu]</name>
         <name>windows_intelx86[opencl_intel_gpu]</name>
@@ -637,6 +639,7 @@
         <name>x86_64-apple-darwin[opencl_nvidia]</name>
         <name>x86_64-pc-linux-gnu</name>
         <name>x86_64-pc-linux-gnu[opencl_ati]</name>
+        <name>x86_64-pc-linux-gnu[opencl_ati_gpu]</name>
         <name>x86_64-pc-linux-gnu[opencl_intel]</name>
         <name>x86_64-pc-linux-gnu[opencl_nvidia]</name>
     </platforms>
@@ -844,28 +847,6 @@
         <keywords>15 32 20 21</keywords>
     </project>
     <project>
-        <name>SZTAKI Desktop Grid</name>
-        <id>32</id>
-        <url>http://szdg.lpds.sztaki.hu/szdg/</url>
-        <web_url>http://szdg.lpds.sztaki.hu/szdg/</web_url>
-        <general_area>Mathematics, computing, and games</general_area>
-        <specific_area>Mathematics</specific_area>
-        <description><![CDATA[Find all the generalized binary number systems (in which bases are matrices and digits are vectors) up to dimension 11.]]></description>
-        <home>MTA-SZTAKI Laboratory of Parallel and Distributed Systems (Hungary)</home>
-    <platforms>
-        <name>i686-apple-darwin</name>
-        <name>i686-pc-linux-gnu</name>
-        <name>powerpc-apple-darwin</name>
-        <name>windows_intelx86</name>
-        <name>windows_intelx86_64</name>
-        <name>x86_64-apple-darwin</name>
-        <name>x86_64-pc-linux-gnu</name>
-    </platforms>
-      <image>https://boinc.berkeley.edu/images/szdg1_small.jpg</image>
-      <summary>Study number theory</summary>
-        <keywords>15 20 40</keywords>
-    </project>
-    <project>
         <name>Gerasim@Home</name>
         <id>33</id>
         <url>http://gerasim.boinc.ru/</url>
@@ -900,6 +881,41 @@
         <name>x86_64-pc-linux-gnu</name>
     </platforms>
         <keywords>15 32</keywords>
+    </project>
+    <project>
+        <name>Distributed Hardware Evolution Project</name>
+        <id>40</id>
+        <url>https://dhep.ga/boinc/</url>
+        <web_url>https://dhep.ga/boinc/</web_url>
+        <general_area>Mathematics, computing, and games</general_area>
+        <specific_area>Electrical Engineering</specific_area>
+        <description><![CDATA[DHEP uses a Genetic Algorithm in a coevolutionary setting to synthesise future super-reliable electronics such as those used in autonomous vehicles, power stations, medical equipment, aerospace. These are of increasingly paramount importance as more and more human lives rely on well functioning hardware.]]></description>
+        <home>University of Sussex</home>
+    <platforms>
+        <name>windows_intelx86</name>
+        <name>windows_x86_64</name>
+        <name>x86_64-apple-darwin</name>
+        <name>x86_64-pc-linux-gnu</name>
+    </platforms>
+      <image>https://boinc.berkeley.edu/images/dhep.png</image>
+      <summary>Help design super-reliable electronic circuits</summary>
+        <keywords>15 20 48</keywords>
+    </project>
+    <project>
+        <name>DBN Upper Bound</name>
+        <id>41</id>
+        <url>http://anthgrid.com/dbnupperbound/</url>
+        <web_url>http://anthgrid.com/dbnupperbound/</web_url>
+        <general_area>Mathematics, computing, and games</general_area>
+        <specific_area>Mathematics</specific_area>
+        <description><![CDATA[DBN Upper Bound does computations related to the Riemann zeta function.]]></description>
+        <home>Independent</home>
+    <platforms>
+        <name>windows_x86_64[vbox64_mt]</name>
+        <name>x86_64-apple-darwin[vbox64_mt]</name>
+        <name>x86_64-pc-linux-gnu[vbox64_mt]</name>
+    </platforms>
+        <keywords>15</keywords>
     </project>
     <project>
         <name>Climateprediction.net</name>

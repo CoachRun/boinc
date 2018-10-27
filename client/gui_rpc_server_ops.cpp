@@ -1,6 +1,6 @@
 // This file is part of BOINC.
 // http://boinc.berkeley.edu
-// Copyright (C) 2008 University of California
+// Copyright (C) 2018 University of California
 //
 // BOINC is free software; you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License
@@ -279,7 +279,7 @@ static void handle_project_nomorework(GUI_RPC_CONN& grc) {
     PROJECT* p = get_project_parse(grc);
     if (!p) return;
     gstate.set_client_state_dirty("Project modified by user");
-    msg_printf(p, MSG_INFO, "work fetch suspended download by user");
+	msg_printf(p, MSG_INFO, "work fetch suspended download by user");
     p->dont_request_more_work = true;
     grc.mfout.printf("<success/>\n");
 }
@@ -290,7 +290,7 @@ static void handle_project_allowmorework(GUI_RPC_CONN& grc) {
     gstate.set_client_state_dirty("Project modified by user");
     msg_printf(p, MSG_INFO, "work fetch resumed by user");
     p->dont_request_more_work = false;
-    gstate.request_work_fetch("project work fetch resumed download by user");
+	gstate.request_work_fetch("project work fetch resumed download by user");
     grc.mfout.printf("<success/>\n");
 }
 
@@ -1050,7 +1050,7 @@ static void handle_get_newer_version(GUI_RPC_CONN& grc) {
         "<newer_version>%s</newer_version>\n"
         "<download_url>%s</download_url>\n",
         gstate.newer_version.c_str(),
-        cc_config.client_download_url.c_str()
+        nvc_config.client_download_url.c_str()
     );
 }
 
