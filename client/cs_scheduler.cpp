@@ -144,7 +144,7 @@ int CLIENT_STATE::make_scheduler_request(PROJECT* p) {
         p->duration_correction_factor,
         cc_config.allow_multiple_clients?1:0,
         g_use_sandbox?1:0,
-        p->dont_request_more_work?1:0
+        p->dont_request_more_work?1:0,
 		p->dont_upload_work?1:0
     );
     work_fetch.write_request(f, p);
