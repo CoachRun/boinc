@@ -1,6 +1,7 @@
 # Status
 
 [![Build Status](https://travis-ci.org/RainGhost/boinc.svg?branch=master)](https://travis-ci.org/RainGhost/boinc)
+[![Build status](https://ci.appveyor.com/api/projects/status/f6kyenmiu4tt9eh7?svg=true)](https://ci.appveyor.com/project/runninghyk/boinc)
 
 # BOINC
 
