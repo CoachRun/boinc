@@ -2,11 +2,6 @@ language: cpp
 compiler:
   - gcc
 
-branches:
-  only:
-    - master
-#   - coverity_scan
-
 dist: trusty
 sudo: required
 
