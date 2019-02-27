@@ -161,7 +161,7 @@ struct PROJECT {
     bool non_cpu_intensive;
     bool suspended_via_gui;
     bool dont_request_more_work;
-	bool dont_upload_work;
+    bool dont_upload_work;
     bool scheduler_rpc_in_progress;
     bool attached_via_acct_mgr;
     bool detach_when_done;

@@ -198,7 +198,7 @@ int CLIENT_STATE::app_finished(ACTIVE_TASK& at) {
         rp->set_ready_to_report();
         rp->completed_time = now;
 #else
-        rp->set_state(RESULT_FILES_UPLOADING, "CS::app_finished");
+        rp->set_state(RESULR_COMPUTE_COMPLETE, "CS::app_finished");
         rp->append_log_record();
 #endif
         rp->project->update_duration_correction_factor(&at);
@@ -208,7 +208,7 @@ int CLIENT_STATE::app_finished(ACTIVE_TASK& at) {
     double elapsed_time = now - rec_interval_start;
     work_fetch.accumulate_inst_sec(&at, elapsed_time);
 
-    rp->project->pwf.request_if_idle_and_uploading = true;
+    //rp->project->pwf.request_if_idle_and_uploading = true;
         // set this to allow work fetch if idle instance,
         // even before upload finishes
 

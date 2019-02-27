@@ -644,9 +644,7 @@ int CLIENT_STATE::init() {
     // NOTE: this must be called AFTER
     // read_vc_config_file()
     //
-    
-	
-	//newer_version_startup_check();
+    newer_version_startup_check();
 
     // parse account files again,
     // now that we know the host's venue on each project
@@ -1805,7 +1803,10 @@ bool CLIENT_STATE::update_results() {
                 if (rp->avp->app_files.size()==0) {
                     // if this is a file-transfer app, start the upload phase
                     //
-                    rp->set_state(RESULT_FILES_UPLOADING, "CS::update_results");
+                	if(rp->project->dont_upload_work)
+                		rp->set_state(RESULR_COMPUTE_COMPLETE, "CS::update_results");
+                	else
+                		rp->set_state(RESULT_FILES_UPLOADING, "CS::update_results");
                     rp->clear_uploaded_flags();
                 } else {
                     // else try to start the computation
@@ -1841,6 +1842,9 @@ bool CLIENT_STATE::update_results() {
                 action = true;
             }
             break;
+        case RESULR_COMPUTE_COMPLETE:
+        	if(!rp->project->dont_upload_work)
+        		rp->set_state(RESULT_FILES_UPLOADING, "CS::update_results");
         }
         ++result_iter;
     }

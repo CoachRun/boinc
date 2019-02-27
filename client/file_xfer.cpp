@@ -86,11 +86,6 @@ int FILE_XFER::init_download(FILE_INFO& file_info) {
 // Do this in memory.
 //
 int FILE_XFER::init_upload(FILE_INFO& file_info) {
-	if (file_info.project->dont_upload_work) {
-		if (!file_info.is_project_file)
-			return -184;
-	}
-
     // If upload_offset < 0, we need to query the upload handler
     // for the offset information
     //

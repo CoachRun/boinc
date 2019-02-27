@@ -166,7 +166,6 @@ int ACCT_MGR_OP::do_rpc(ACCT_MGR_INFO& _ami, bool _via_gui) {
             "      <in_progress_dur>%f</in_progress_dur>\n"
             "      <attached_via_acct_mgr>%d</attached_via_acct_mgr>\n"
             "      <dont_request_more_work>%d</dont_request_more_work>\n"
-			"      <dont_upload_work>%d</dont_upload_work>\n"
             "      <detach_when_done>%d</detach_when_done>\n"
             "      <ended>%d</ended>\n"
             "      <resource_share>%f</resource_share>\n"
@@ -180,7 +179,6 @@ int ACCT_MGR_OP::do_rpc(ACCT_MGR_INFO& _ami, bool _via_gui) {
             in_progress_dur,
             p->attached_via_acct_mgr?1:0,
             p->dont_request_more_work?1:0,
-			p->dont_upload_work?1:0,
             p->detach_when_done?1:0,
             p->ended?1:0,
             p->resource_share,
@@ -286,7 +284,6 @@ int AM_ACCOUNT::parse(XML_PARSER& xp) {
     update = false;
     memset(no_rsc, 0, sizeof(no_rsc));
     dont_request_more_work.init();
-	dont_upload_work.init();
     detach_when_done.init();
     suspend.init();
     abort_not_started.init();

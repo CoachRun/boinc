@@ -680,6 +680,7 @@ static const char* result_state_name(int val) {
     case RESULT_FILES_UPLOADING: return "FILES_UPLOADING";
     case RESULT_FILES_UPLOADED: return "FILES_UPLOADED";
     case RESULT_ABORTED: return "ABORTED";
+    case RESULR_COMPUTE_COMPLETE: return "COMPUTE_COMPLETE";
     }
     return "Unknown";
 }

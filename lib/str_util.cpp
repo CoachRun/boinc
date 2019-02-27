@@ -705,6 +705,7 @@ const char* result_client_state_string(int state) {
     case RESULT_FILES_UPLOADED: return "uploaded";
     case RESULT_ABORTED: return "aborted";
     case RESULT_UPLOAD_FAILED: return "upload failed";
+    case RESULR_COMPUTE_COMPLETE: return "compute complete";
     }
     return "unknown";
 }

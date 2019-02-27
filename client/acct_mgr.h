@@ -144,7 +144,6 @@ struct AM_ACCOUNT {
     bool no_rsc[MAX_RSC];
         // instructions from AM not to use various resources
     OPTIONAL_BOOL dont_request_more_work;
-	OPTIONAL_BOOL dont_upload_work;
     OPTIONAL_BOOL detach_when_done;
     OPTIONAL_DOUBLE resource_share;
     OPTIONAL_BOOL suspend;
@@ -158,7 +157,6 @@ struct AM_ACCOUNT {
         update = false;
         dont_request_more_work.init();
         detach_when_done.init();
-		dont_upload_work.init();
         resource_share.init();
         suspend.init();
         abort_not_started.init();

@@ -1,6 +1,11 @@
 # Which files and directories are safe to ignore
 #
 
+# Eclipse Project files
+.settings/
+.project
+.cproject
+
 # Visual Studio project files
 *.user
 *.ncb
@@ -61,7 +66,7 @@
 /android/BOINC/app/src/main/assets/ca-bundle.crt
 
 ## files created by _autosetup (autoreconf):
-#*.in
+*.in
 *.in~
 aclocal.m4
 autom4te.cache/

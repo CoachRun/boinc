@@ -168,6 +168,7 @@ enum BATTERY_STATE {
     // result was aborted
 #define RESULT_UPLOAD_FAILED        7
     // some output file permanent failure
+#define RESULR_COMPUTE_COMPLETE     8
 
 // Values of FILE_INFO::status.
 // If the status is neither of these two,

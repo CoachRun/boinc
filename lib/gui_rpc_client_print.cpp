@@ -99,7 +99,7 @@ void PROJECT::print() {
     printf("   ended: %s\n", ended?"yes":"no");
     printf("   suspended via GUI: %s\n", suspended_via_gui?"yes":"no");
     printf("   don't request more work: %s\n", dont_request_more_work?"yes":"no");
-	printf("   don't upload work: %s\n", dont_upload_work?"yes":"no");
+    printf("   don't upload work: %s\n", dont_upload_work?"yes":"no");
     printf("   disk usage: %f\n", disk_usage);
     time_t foo = (time_t)last_rpc_time;
     printf("   last RPC: %s\n", ctime(&foo));
